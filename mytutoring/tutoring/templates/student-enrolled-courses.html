@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Student Enrolled Courses - Online Courses & Education Bootstrap5 Template</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.png">
+
+    <!-- CSS
+	============================================ -->
+    <link rel="stylesheet" href="/static/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/vendor/slick.css">
+    <link rel="stylesheet" href="/static/css/vendor/slick-theme.css">
+    <link rel="stylesheet" href="/static/css/plugins/sal.css">
+    <link rel="stylesheet" href="/static/css/plugins/feather.css">
+    <link rel="stylesheet" href="/static/css/plugins/fontawesome.min.css">
+    <link rel="stylesheet" href="/static/css/plugins/euclid-circulara.css">
+    <link rel="stylesheet" href="/static/css/plugins/swiper.css">
+    <link rel="stylesheet" href="/static/css/plugins/magnify.css">
+    <link rel="stylesheet" href="/static/css/plugins/odometer.css">
+    <link rel="stylesheet" href="/static/css/plugins/animation.css">
+    <link rel="stylesheet" href="/static/css/plugins/bootstrap-select.min.css">
+    <link rel="stylesheet" href="/static/css/plugins/jquery-ui.css">
+    <link rel="stylesheet" href="/static/css/plugins/magnigy-popup.min.css">
+    <link rel="stylesheet" href="/static/css/plugins/plyr.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <header class="rbt-header rbt-header-10">
+        <div class="rbt-sticky-placeholder"></div>
+       
+        <div class="rbt-header-wrapper header-space-betwween header-sticky">
+            <div class="container-fluid">
+                <div class="mainbar-row rbt-navigation-center align-items-center">
+                    <div class="header-left rbt-header-content">
+                        <div class="header-info">
+                            <div class="logo">
+                                <a href="index">
+                                    <img src="/static/images/logo/logo2.png" width="150" height="150" alt="Education Logo Images">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header-info">
+                        </div>   
+                    </div>
+
+                    <div class="rbt-main-navigation d-none d-xl-block">
+                        <nav class="mainmenu-nav">
+                            <ul class="mainmenu">
+                                <li class="with-megamenu has-menu-child-item position-/static">
+                                    <a href="/tutoring">Home</a>
+                                </li>
+                                <li class="with-megamenu has-menu-child-item position-/static">
+                                    <a href="/tutoring/dashboard">Dashboard</a>
+                                </li>
+
+                                <li class="with-megamenu has-menu-child-item">
+                                    <a href="#">Courses <i class="feather-chevron-down"></i></a>
+                                    <!-- Start Mega Menu  -->
+                                    <div class="rbt-megamenu grid-item-2">
+                                        <div class="wrapper">
+                                            
+                                            <div class="row row--15">
+                                                
+                                                <div class="col-lg-12 col-xl-6 col-xxl-6 single-mega-item">
+                                                    <h3 class="rbt-short-title">Courses</h3>
+                                                    <ul class="mega-menu-item">
+                                                        <li><a href="/tutoring/course-details">The Complete Python 2023 <br>Zero to Hero</a></li>
+                                                        <li><a href="/tutoring/course-details-2">React Front-end Development 2023</a></li>
+                                                        <li><a href="/tutoring/course-details-3">Nodejs Fullstack Development 2024<span class="rbt-badge-card">New</span></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <!-- End Mega Menu  -->
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="header-right">
+                        <!-- Navbar Icons -->
+                        <ul class="quick-access">
+                            {% if user.is_authenticated %}
+                                <li class="account-access rbt-user-wrapper d-none d-xl-block">
+                                    <a href="#"><i class="feather-user"></i>{{ user.first_name }}</a>
+                                    <div class="rbt-user-menu-list-wrapper">
+                                        <div class="inner">
+                                            <div class="rbt-admin-profile">
+                                                <div class="admin-thumbnail">
+                                                    <img src="/static/images/team/avatar.jpg" alt="User Images">
+                                                </div>
+                                                <div class="admin-info">
+                                                    <span class="name">{{ user.first_name }}</span>
+                                                </div>
+                                            </div>
+                                                                                
+                                            <hr class="mt--10 mb--10">
+                                            <ul class="user-list-wrapper">
+                                                <li>
+                                                    <form id="logout-form" action="{% url 'logout' %}" method="post" style="display: none;">
+                                                        {% csrf_token %}  <!-- CSRF token for security -->
+                                                    </form>
+
+                                                    <a href="#" id="logout-link">  <!-- Optional: href can be left as # or empty -->
+                                                        <i class="feather-log-out"></i>  <!-- Icon for logout -->
+                                                        <span>Logout</span>  <!-- Text for logout -->
+                                                    </a>
+                                                   
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% else %}
+                                <li class="account-access rbt-user-wrapper d-none d-xl-block">
+                                    <a href="#"><i class="feather-user"></i><a href="{% url 'login' %}">Login</a></a>
+                                </li>
+                                
+                            {% endif %}
+                            
+                            <li class="access-icon rbt-user-wrapper d-block d-xl-none">
+                                <a class="rbt-round-btn" href="#"><i class="feather-user"></i></a>
+                                <div class="rbt-user-menu-list-wrapper">
+                                    <div class="inner">
+                                        <div class="rbt-admin-profile">
+                                            <div class="admin-thumbnail">
+                                                <img src="/static/images/team/avatar.jpg" alt="User Images">
+                                            </div>
+                                            <div class="admin-info">
+                                                <span class="name">Divya</span>
+                                                <a class="rbt-btn-link color-primary" href="dashboard">Dashboard</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <hr class="mt--10 mb--10">
+                                        
+                                        <ul class="user-list-wrapper">
+                                            
+                                            <li>
+                                                <a href="index">
+                                                    <i class="feather-log-out"></i>
+                                                    <span>Logout</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- Start Mobile-Menu-Bar -->
+                        <div class="mobile-menu-bar d-block d-xl-none">
+                            <div class="hamberger">
+                                <button class="hamberger-button rbt-round-btn">
+                                    <i class="feather-menu"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Start Mobile-Menu-Bar -->
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+       
+        <a class="rbt-close_side_menu" href="javascript:void(0);"></a>
+    </header>
+
+    
+    <a class="close_side_menu" href="javascript:void(0);"></a>
+
+    <div class="rbt-page-banner-wrapper">
+        <!-- Start Banner BG Image  -->
+        <div class="rbt-banner-image"></div>
+        <!-- End Banner BG Image  -->
+    </div>
+
+    <!-- Start Card Style -->
+    <div class="rbt-dashboard-area rbt-section-overlayping-top rbt-section-gapBottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                
+
+                    <div class="row g-5">
+                        <div class="col-lg-3">
+                            <!-- Start Dashboard Sidebar  -->
+                            <div class="rbt-default-sidebar sticky-top rbt-shadow-box rbt-gradient-border">
+                                <div class="inner">
+                                    <div class="content-item-content">
+
+                                        <div class="rbt-default-sidebar-wrapper">
+                                            <div class="section-title mb--20">
+                                                <h6 class="rbt-title-style-2">Welcome, {{user.first_name}}</h6>
+                                            </div>
+                                            <nav class="mainmenu-nav">
+                                                <ul class="dashboard-mainmenu rbt-default-sidebar-list">
+                                                    <li><a href="dashboard"><i class="feather-home"></i><span>Dashboard</span></a></li>
+                                                    <li><a href="student-course"><i class="feather-book-open"></i><span>Enrolled Courses</span></a></li>
+                                                    <li><a href="student-quiz"><i class="feather-help-circle"></i><span>My Quiz Attempts</span></a></li>
+                                                </ul>
+                                            </nav>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Dashboard Sidebar  -->
+                        </div>
+
+                        <div class="col-lg-9">
+                            <!-- Start Enrole Course  -->
+                            <div class="rbt-dashboard-content bg-color-white rbt-shadow-box">
+                                <div class="content">
+
+                                    <div class="section-title">
+                                        <h4 class="rbt-title-style-3">Enrolled Courses</h4>
+                                    </div>
+
+                                    <div class="advance-tab-button mb--30">
+                                        <ul class="nav nav-tabs tab-button-style-2 justify-content-start" id="myTab-4" role="tablist">
+                                            <li role="presentation">
+                                                <a href="#" class="tab-button active" id="home-tab-4" data-bs-toggle="tab" data-bs-target="#home-4" role="tab" aria-controls="home-4" aria-selected="true">
+                                                    <span class="title">Enrolled Courses</span>
+                                                </a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a href="#" class="tab-button" id="profile-tab-4" data-bs-toggle="tab" data-bs-target="#profile-4" role="tab" aria-controls="profile-4" aria-selected="false">
+                                                    <span class="title">Active Courses</span>
+                                                </a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a href="#" class="tab-button" id="contact-tab-4" data-bs-toggle="tab" data-bs-target="#contact-4" role="tab" aria-controls="contact-4" aria-selected="false">
+                                                    <span class="title">Completed Courses</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade active show" id="home-4" role="tabpanel" aria-labelledby="home-tab-4">
+                                            <div class="row g-5">
+                                                <!-- Start Single Course  -->
+                                                <div class="col-lg-4 col-md-6 col-12">
+                                                    <div class="rbt-card variation-01 rbt-hover">
+                                                        <div class="rbt-card-img">
+                                                            <a href="course-details-2">
+                                                                <img src="/static/images/course/course-online-01.jpg" alt="Card image">
+                                                            </a>
+                                                        </div>
+                                                        <div class="rbt-card-body">
+                                                            <div class="rbt-card-top">
+                                                                <div class="rbt-review">
+                                                                    <div class="rating">
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                    </div>
+                                                                    <span class="rating-count"> (15 Reviews)</span>
+                                                                </div>
+                                                                <div class="rbt-bookmark-btn">
+                                                                    <a class="rbt-round-btn" title="Bookmark" href="#"><i class="feather-bookmark"></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <h4 class="rbt-card-title"><a href="course-details-2">React Front-End</a>
+                                                            </h4>
+                                                            <ul class="rbt-meta">
+                                                                <li><i class="feather-book"></i>20 Lessons</li>
+                                                                <li><i class="feather-users"></i>40 Students</li>
+                                                            </ul>
+
+                                                            <div class="rbt-progress-style-1 mb--20 mt--10">
+                                                                <div class="single-progress">
+                                                                    <h6 class="rbt-title-style-2 mb--10">Complete</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft bar-color-success" data-wow-duration="0.5s" data-wow-delay=".3s" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                                                        </div>
+                                                                        <span class="rbt-title-style-2 progress-number">90%</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rbt-card-bottom">
+                                                                <a class="rbt-btn btn-sm bg-primary-opacity w-100 text-center" href="#">Download Certificate</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Single Course  -->
+
+                                                <!-- Start Single Course  -->
+                                                <div class="col-lg-4 col-md-6 col-12">
+                                                    <div class="rbt-card variation-01 rbt-hover">
+                                                        <div class="rbt-card-img">
+                                                            <a href="course-details">
+                                                                <img src="/static/images/course/course-online-02.jpg" alt="Card image">
+                                                            </a>
+                                                        </div>
+                                                        <div class="rbt-card-body">
+                                                            <div class="rbt-card-top">
+                                                                <div class="rbt-review">
+                                                                    <div class="rating">
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                    </div>
+                                                                    <span class="rating-count"> (15 Reviews)</span>
+                                                                </div>
+                                                                <div class="rbt-bookmark-btn">
+                                                                    <a class="rbt-round-btn" title="Bookmark" href="#"><i class="feather-bookmark"></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <h4 class="rbt-card-title"><a href="course-details">The Complete Python 2024</a>
+                                                            </h4>
+                                                            <ul class="rbt-meta">
+                                                                <li><i class="feather-book"></i>10 Lessons</li>
+                                                                <li><i class="feather-users"></i>30 Students</li>
+                                                            </ul>
+
+                                                            <div class="rbt-progress-style-1 mb--20 mt--10">
+                                                                <div class="single-progress">
+                                                                    <h6 class="rbt-title-style-2 mb--10">Complete</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft bar-color-success" data-wow-duration="0.5s" data-wow-delay=".3s" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                                                        </div>
+                                                                        <span class="rbt-title-style-2 progress-number">40%</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rbt-card-bottom">
+                                                                <a class="rbt-btn btn-sm bg-primary-opacity w-100 text-center" href="#">Download Certificate</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Single Course  -->
+
+                                                <!-- Start Single Course  -->
+                                                <div class="col-lg-4 col-md-6 col-12">
+                                                    <div class="rbt-card variation-01 rbt-hover">
+                                                        <div class="rbt-card-img">
+                                                            <a href="course-details-3">
+                                                                <img src="/static/images/course/course-online-03.jpg" alt="Card image">
+                                                            </a>
+                                                        </div>
+                                                        <div class="rbt-card-body">
+                                                            <div class="rbt-card-top">
+                                                                <div class="rbt-review">
+                                                                    <div class="rating">
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                    </div>
+                                                                    <span class="rating-count"> (4 Reviews)</span>
+                                                                </div>
+                                                                <div class="rbt-bookmark-btn">
+                                                                    <a class="rbt-round-btn" title="Bookmark" href="#"><i class="feather-bookmark"></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <h4 class="rbt-card-title"><a href="course-details-3">Nodejs Fullstack Developement</a>
+                                                            </h4>
+                                                            <ul class="rbt-meta">
+                                                                <li><i class="feather-book"></i>14 Lessons</li>
+                                                                <li><i class="feather-users"></i>26 Students</li>
+                                                            </ul>
+
+                                                            <div class="rbt-progress-style-1 mb--20 mt--10">
+                                                                <div class="single-progress">
+                                                                    <h6 class="rbt-title-style-2 mb--10">Complete</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft bar-color-success" data-wow-duration="0.5s" data-wow-delay=".3s" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                                                                        </div>
+                                                                        <span class="rbt-title-style-2 progress-number">65%</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rbt-card-bottom">
+                                                                <a class="rbt-btn btn-sm bg-primary-opacity w-100 text-center" href="#">Download Certificate</a>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Single Course  -->
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane fade" id="profile-4" role="tabpanel" aria-labelledby="profile-tab-4">
+                                            <div class="row g-5">
+                                                <!-- Start Single Course  -->
+                                                <div class="col-lg-4 col-md-6 col-12">
+                                                    <div class="rbt-card variation-01 rbt-hover">
+                                                        <div class="rbt-card-img">
+                                                            <a href="course-details-3">
+                                                                <img src="/static/images/course/course-online-03.jpg" alt="Card image">
+                                                            </a>
+                                                        </div>
+                                                        <div class="rbt-card-body">
+                                                            <div class="rbt-card-top">
+                                                                <div class="rbt-review">
+                                                                    <div class="rating">
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                    </div>
+                                                                    <span class="rating-count"> (4 Reviews)</span>
+                                                                </div>
+                                                                <div class="rbt-bookmark-btn">
+                                                                    <a class="rbt-round-btn" title="Bookmark" href="#"><i class="feather-bookmark"></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <h4 class="rbt-card-title"><a href="course-details-3">Nodejs Fullstack Developement</a>
+                                                            </h4>
+                                                            <ul class="rbt-meta">
+                                                                <li><i class="feather-book"></i>14 Lessons</li>
+                                                                <li><i class="feather-users"></i>26 Students</li>
+                                                            </ul>
+
+                                                            <div class="rbt-progress-style-1 mb--20 mt--10">
+                                                                <div class="single-progress">
+                                                                    <h6 class="rbt-title-style-2 mb--10">Complete</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft bar-color-success" data-wow-duration="0.5s" data-wow-delay=".3s" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                                                                        </div>
+                                                                        <span class="rbt-title-style-2 progress-number">65%</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rbt-card-bottom">
+                                                                <a class="rbt-btn btn-sm bg-primary-opacity w-100 text-center" href="#">Download Certificate</a>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Single Course  -->
+
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane fade" id="contact-4" role="tabpanel" aria-labelledby="contact-tab-4">
+                                            <div class="row g-5">
+                                                <!-- Start Single Course  -->
+                                                <div class="col-lg-4 col-md-6 col-12">
+                                                    <div class="rbt-card variation-01 rbt-hover">
+                                                        <div class="rbt-card-img">
+                                                            <a href="course-details">
+                                                                <img src="/static/images/course/course-online-02.jpg" alt="Card image">
+                                                            </a>
+                                                        </div>
+                                                        <div class="rbt-card-body">
+                                                            <div class="rbt-card-top">
+                                                                <div class="rbt-review">
+                                                                    <div class="rating">
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                    </div>
+                                                                    <span class="rating-count"> (15 Reviews)</span>
+                                                                </div>
+                                                                <div class="rbt-bookmark-btn">
+                                                                    <a class="rbt-round-btn" title="Bookmark" href="#"><i class="feather-bookmark"></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <h4 class="rbt-card-title"><a href="course-details">The Complete Python 2024</a>
+                                                            </h4>
+                                                            <ul class="rbt-meta">
+                                                                <li><i class="feather-book"></i>10 Lessons</li>
+                                                                <li><i class="feather-users"></i>30 Students</li>
+                                                            </ul>
+
+                                                            <div class="rbt-progress-style-1 mb--20 mt--10">
+                                                                <div class="single-progress">
+                                                                    <h6 class="rbt-title-style-2 mb--10">Complete</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft bar-color-success" data-wow-duration="0.5s" data-wow-delay=".3s" role="progressbar" style="width: 100%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                                                        </div>
+                                                                        <span class="rbt-title-style-2 progress-number">100%</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rbt-card-bottom">
+                                                                <a class="rbt-btn btn-sm bg-primary-opacity w-100 text-center" href="#">Download Certificate</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Single Course  -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- End Enrole Course  -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Card Style -->
+
+
+
+
+    <div class="rbt-separator-mid">
+        <div class="container">
+            <hr class="rbt-separator m-0">
+        </div>
+    </div>
+    
+    <div class="rbt-progress-parent">
+        <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+    <!-- JS
+============================================ -->
+    <!-- Modernizer JS -->
+    <script src="/static/js/vendor/modernizr.min.js"></script>
+    <!-- jQuery JS -->
+    <script src="/static/js/vendor/jquery.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/static/js/vendor/bootstrap.min.js"></script>
+    <!-- sal.js -->
+    <script src="/static/js/vendor/sal.js"></script>
+    <script src="/static/js/vendor/swiper.js"></script>
+    <script src="/static/js/vendor/magnify.min.js"></script>
+    <script src="/static/js/vendor/jquery-appear.js"></script>
+    <script src="/static/js/vendor/odometer.js"></script>
+    <script src="/static/js/vendor/backtotop.js"></script>
+    <script src="/static/js/vendor/isotop.js"></script>
+    <script src="/static/js/vendor/imageloaded.js"></script>
+
+    <script src="/static/js/vendor/wow.js"></script>
+    <script src="/static/js/vendor/waypoint.min.js"></script>
+    <script src="/static/js/vendor/easypie.js"></script>
+    <script src="/static/js/vendor/text-type.js"></script>
+    <script src="/static/js/vendor/jquery-one-page-nav.js"></script>
+    <script src="/static/js/vendor/bootstrap-select.min.js"></script>
+    <script src="/static/js/vendor/jquery-ui.js"></script>
+    <script src="/static/js/vendor/magnify-popup.min.js"></script>
+    <script src="/static/js/vendor/paralax-scroll.js"></script>
+    <script src="/static/js/vendor/paralax.min.js"></script>
+    <script src="/static/js/vendor/countdown.js"></script>
+    <script src="/static/js/vendor/plyr.js"></script>
+    <!-- Main JS -->
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Lesson - Online Courses & Education Bootstrap5 Template</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{% csrf_token %}">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.png">
+
+    <!-- CSS
+	============================================ -->
+    <link rel="stylesheet" href="/static/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/vendor/slick.css">
+    <link rel="stylesheet" href="/static/css/vendor/slick-theme.css">
+    <link rel="stylesheet" href="/static/css/plugins/sal.css">
+    <link rel="stylesheet" href="/static/css/plugins/feather.css">
+    <link rel="stylesheet" href="/static/css/plugins/fontawesome.min.css">
+    <link rel="stylesheet" href="/static/css/plugins/euclid-circulara.css">
+    <link rel="stylesheet" href="/static/css/plugins/swiper.css">
+    <link rel="stylesheet" href="/static/css/plugins/magnify.css">
+    <link rel="stylesheet" href="/static/css/plugins/odometer.css">
+    <link rel="stylesheet" href="/static/css/plugins/animation.css">
+    <link rel="stylesheet" href="/static/css/plugins/bootstrap-select.min.css">
+    <link rel="stylesheet" href="/static/css/plugins/jquery-ui.css">
+    <link rel="stylesheet" href="/static/css/plugins/magnigy-popup.min.css">
+    <link rel="stylesheet" href="/static/css/plugins/plyr.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/chatbot-style.css">
+</head>
+
+<body class="rbt-header-sticky">
+
+    <div class="rbt-lesson-area bg-color-white">
+        <div class="rbt-lesson-content-wrapper">
+            <div class="rbt-lesson-leftsidebar">
+                <div class="rbt-course-feature-inner rbt-search-activation">
+                    <div class="section-title">
+                        <h4 class="rbt-title-style-3">Course Content</h4>
+                    </div>
+
+                    <div class="lesson-search-wrapper">
+                        <form action="#" class="rbt-search-style-1">
+                            <input class="rbt-search-active" type="text" placeholder="Search Lesson">
+                            <button class="search-btn disabled"><i class="feather-search"></i></button>
+                        </form>
+                    </div>
+
+                    <hr class="mt--10">
+
+                    <div class="rbt-accordion-style rbt-accordion-02 for-right-content accordion">
+
+
+                        <div class="accordion" id="accordionExampleb2">
+
+                            <div class="accordion-item card">
+                                <h2 class="accordion-header card-header" id="headingTwo1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true" data-bs-target="#collapseTwo1" aria-controls="collapseTwo1">
+                                        Welcome {{ course }} <span class="rbt-badge-5 ml--10">1/2</span>
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo1" class="accordion-collapse collapse show" aria-labelledby="headingTwo1">
+                                    <div class="accordion-body card-body">
+                                        <ul class="rbt-course-main-content liststyle">
+
+                                            <li>
+                                                <a href="lesson">
+                                                    <div class="course-content-left">
+                                                        <i class="feather-play-circle"></i> <span class="text">Course
+                                            Intro</span>
+                                                    </div>
+                                                    <div class="course-content-right">
+                                                        <span class="min-lable">30 min</span>
+                                                        <span class="rbt-check"><i class="feather-check"></i></span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="lesson-intro">
+                                                    <div class="course-content-left">
+                                                        <i class="feather-file-text"></i> <span class="text">Introduction</span>
+                                                    </div>
+                                                    <div class="course-content-right">
+                                                        <span class="rbt-check"><i class="feather-check"></i></span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item card">
+                                <h2 class="accordion-header card-header" id="headingTwo4">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true" data-bs-target="#collapseTwo4" aria-controls="collapseTwo4">
+                                        {{ course }} Lessons <span class="rbt-badge-5 ml--10">1/3</span>
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo4" class="accordion-collapse collapse show" aria-labelledby="headingTwo4">
+                                    <div class="accordion-body card-body">
+                                        <ul class="rbt-course-main-content liststyle">
+
+                                            <li>
+                                                <a href="lesson">
+                                                    <div class="course-content-left">
+                                                        <i class="feather-play-circle"></i> <span class="text">Hello World!
+                                        </span>
+                                                    </div>
+                                                    <div class="course-content-right">
+                                                        <span class="min-lable">0.37</span>
+                                                        <span class="rbt-check"><i class="feather-check"></i></span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <div class="course-content-left">
+                                                        <i class="feather-play-circle"></i> <span class="text">Values and Variables</span>
+                                                    </div>
+                                                    <div class="course-content-right">
+                                                        <span class="min-lable">20 min</span>
+                                                        <span class="rbt-check unread"><i class="feather-circle"></i></span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <div class="course-content-left">
+                                                        <i class="feather-play-circle"></i> <span class="text">Basic Operators
+                                        </span>
+                                                    </div>
+                                                    <div class="course-content-right">
+                                                        <span class="min-lable">15 min</span>
+                                                        <span class="rbt-check unread"><i class="feather-circle"></i></span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item card">
+                                <h2 class="accordion-header card-header" id="headingTwo2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#collapseTwo2" aria-controls="collapseTwo2">
+                                        {{ course }} Quiz <span class="rbt-badge-5 ml--10">1/2</span>
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo2" class="accordion-collapse collapse" aria-labelledby="headingTwo2">
+                                    <div class="accordion-body card-body">
+                                        <ul class="rbt-course-main-content liststyle">
+                                            <li>
+                                                <a href="lesson-quiz">
+                                                    <div class="course-content-left">
+                                                        <i class="feather-help-circle"></i> <span class="text">{{ course }} Quiz Start</span>
+                                                    </div>
+                                                    <div class="course-content-right">
+                                                        <span class="rbt-check unread"><i class="feather-circle"></i></span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="lesson-quiz-result">
+                                                    <div class="course-content-left">
+                                                        <i class="feather-help-circle"></i> <span class="text">{{ course }} Quiz Result</span>
+                                                    </div>
+                                                    <div class="course-content-right">
+                                                        <span class="rbt-check unread"><i class="feather-circle"></i></span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="rbt-lesson-rightsidebar overflow-hidden lesson-video">
+                <div class="lesson-top-bar">
+                    <div class="lesson-top-left">
+                        <div class="rbt-lesson-toggle">
+                            <button class="lesson-toggle-active btn-round-white-opacity" title="Toggle Sidebar"><i class="feather-arrow-left"></i></button>
+                        </div>
+                        {% if course == 'Python' %}
+                            <h5>The Complete  {{ course }} 2023: From Zero to Expert!</h5>
+                        {% elif course == 'React' %}
+                            <h5>{{ course }} Front-End development 2023</h5>
+                        {% else %}
+                            <h5>{{ course }} Fullstack development 2024</h5>
+                        {% endif %}
+                    </div>
+                    <div class="lesson-top-right">
+                        <div class="rbt-btn-close">
+                            <a href="/tutoring/course-details" title="Go Back to Course" class="rbt-round-btn"><i class="feather-x"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner">
+                    <div class="plyr__video-embed rbtplayer">
+                        <iframe src="https://www.youtube.com/embed/qKzhrXqT6oE" allowfullscreen allow="autoplay"></iframe>
+                    </div>
+                    <div class="content">
+                        <div class="section-title">
+                            <h4>About Lesson</h4>
+                            <p>Let us analyze the greatest hits of the past and learn what makes these tracks so
+                                special. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-color-extra2 ptb--15 overflow-hidden">
+                    <div class="rbt-button-group">
+
+                        <a class="rbt-btn icon-hover icon-hover-left btn-md bg-primary-opacity" href="#">
+                            <span class="btn-icon"><i class="feather-arrow-left"></i></span>
+                            <span class="btn-text">Previous</span>
+                        </a>
+
+                        <a class="rbt-btn icon-hover btn-md" href="#">
+                            <span class="btn-text">Next</span>
+                            <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="rbt-progress-parent">
+        <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+    <div class="rbt-header-sticky">
+
+        <div class="chat-box">
+            <div class="chat-box-header">
+                <h4>Message Us</h4>
+                <p><i class="fa fa-times"></i></p>
+            </div>
+            <div class="chat-box-body" id="chat-box-body">
+                
+            </div>
+            <div class="chat-box-footer">
+                <form id="chat-form">
+                    {% csrf_token %}
+                    <input id="chat-msg-send" placeholder="Enter Your Message" type="text" autocomplete="off"/>
+                </form>
+            </div>
+        </div>
+        <div class="chat-button"><span><img src="/static/images/team/avatar.jpg" alt="User Images"></span></div>
+            
+    </div>
+
+    <!-- JS
+============================================ -->
+    <!-- Modernizer JS -->
+    <script src="/static/js/vendor/modernizr.min.js"></script>
+    <!-- jQuery JS -->
+    <script src="/static/js/vendor/jquery.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/static/js/vendor/bootstrap.min.js"></script>
+    <!-- sal.js -->
+    <script src="/static/js/vendor/sal.js"></script>
+    <script src="/static/js/vendor/swiper.js"></script>
+    <script src="/static/js/vendor/magnify.min.js"></script>
+    <script src="/static/js/vendor/jquery-appear.js"></script>
+    <script src="/static/js/vendor/odometer.js"></script>
+    <script src="/static/js/vendor/backtotop.js"></script>
+    <script src="/static/js/vendor/isotop.js"></script>
+    <script src="/static/js/vendor/imageloaded.js"></script>
+
+    <script src="/static/js/vendor/wow.js"></script>
+    <script src="/static/js/vendor/waypoint.min.js"></script>
+    <script src="/static/js/vendor/easypie.js"></script>
+    <script src="/static/js/vendor/text-type.js"></script>
+    <script src="/static/js/vendor/jquery-one-page-nav.js"></script>
+    <script src="/static/js/vendor/bootstrap-select.min.js"></script>
+    <script src="/static/js/vendor/jquery-ui.js"></script>
+    <script src="/static/js/vendor/magnify-popup.min.js"></script>
+    <script src="/static/js/vendor/paralax-scroll.js"></script>
+    <script src="/static/js/vendor/paralax.min.js"></script>
+    <script src="/static/js/vendor/countdown.js"></script>
+    <script src="/static/js/vendor/plyr.js"></script>
+    <!-- Main JS -->
+    <script src="/static/js/main.js"></script>
+<script>
+         $("#logout-link").on("click", function (event) {
+            event.preventDefault();  // Prevent the default anchor behavior
+            $("#logout-form").submit();  // Submit the hidden logout form
+        });
+    </script>
+    <script src="/static/js/chatbot-script.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+            const form = $("#chat-form");
+            const inputField = $("#chat-msg-send");
+            var currentContext = null;
+
+            // Add a keydown event listener to the input field
+            inputField.keydown(function(event) {
+                // Check if the Enter key is pressed
+                if (event.key === 'Enter') {
+                event.preventDefault();  // Prevent the default action
+
+                // Get the message from the input field
+                var msg = inputField.val();
+
+                var myMessage = { text: msg };
+                addMessageToChatBox(myMessage, 'send');  // Adding a sent message
+
+                // AJAX POST request with CSRF token
+                $.ajax({
+                    type: "POST",
+                    url: "/chatbot/chat/",  
+                    data: {
+                    'csrfmiddlewaretoken': getCsrfToken(),  
+                    'message': msg,
+                    'context': currentContext
+                    },
+                    success: function(response) {
+                        console.log("Response:", response);
+                        var resp = response.response;
+
+                        if (resp.hasOwnProperty("question")) {
+                            var questionText = "Question: " + resp.question;
+                            var choicesText = "Options: " + resp.choices.join(", ");
+                            
+                            var responseMessage = {
+                                text: questionText + "\n" + choicesText,
+                                context: resp.context
+                            };
+                            currentContext = resp.context;
+                            addMessageToChatBox(responseMessage, 'receive');  // Handle adding the message to the chatbox
+                        } else {
+                            // If it's a simple text response
+                            var responseMessage = { text: resp };
+                            currentContext = null;
+                            addMessageToChatBox(responseMessage, 'receive');  // Handle adding the message to the chatbox
+                        } 
+                    },
+                    error: function(error) {
+                    console.error("Error:", error);  
+                    }
+                });
+
+                // Clear the input field after submission
+                inputField.val('');
+                }
+            });
+
+            // Function to get CSRF token for secure AJAX requests
+            function getCsrfToken() {
+                return form.find("[name=csrfmiddlewaretoken]").val();  // Extract the CSRF token from the form
+            }
+
+            function addMessageToChatBox(message, type) {
+                // Create a new div for the message
+                var newMessage = document.createElement('div');
+
+                // Set the class based on the message type (send or receive)
+                if (type === 'send') {
+                    newMessage.className = 'chat-box-body-send';
+                } else if (type === 'receive') {
+                    newMessage.className = 'chat-box-body-receive';
+                }
+
+                // Add the message content
+                newMessage.innerHTML = `
+                    <p>${message.text}</p>
+                `;
+
+                // Append the new message to the chat box
+                var chatBox = document.getElementById('chat-box-body');
+                chatBox.appendChild(newMessage);
+
+                // Optionally, scroll to the bottom of the chat box to show the latest message
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

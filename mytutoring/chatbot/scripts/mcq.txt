@@ -1,0 +1,81 @@
+Question: Which of the following is a list in Python?
+Choices:
+ - {1, 2, 3}
+ - (1, 2, 3)
+ - [1, 2, 3]
+ - <1, 2, 3>
+Correct answer: [1, 2, 3]
+Explanation: Lists in Python are defined using square brackets.
+
+Question: What is the output of `print(2 * 3 + 5)`?
+Choices:
+ - 11
+ - 16
+ - 10
+ - 9
+Correct answer: 11
+Explanation: Multiplication has higher precedence than addition. So, 2 * 3 is 6, then 6 + 5 is 11.
+
+Question: Which keyword is used to define a function in Python?
+Choices:
+ - func
+ - def
+ - lambda
+ - method
+Correct answer: def
+Explanation: The `def` keyword is used to define functions in Python.
+
+Question: Which of these is a built-in module in Node.js?
+Choices:
+ - fs
+ - lodash
+ - express
+ - async
+Correct answer: fs
+Explanation: The `fs` module is used for file system operations and is built into Node.js.
+
+Question: What is the command to initialize a new Node.js project?
+Choices:
+ - npm init
+ - node init
+ - npx init
+ - npm start
+Correct answer: npm init
+Explanation: The `npm init` command is used to initialize a new Node.js project.
+
+Question: Which global object in Node.js is used for handling asynchronous operations?
+Choices:
+ - global
+ - process
+ - Promise
+ - Buffer
+Correct answer: Promise
+Explanation: The `Promise` object is a common way to handle asynchronous operations in Node.js.
+
+Question: Which of the following is a back-end framework?
+Choices:
+ - React
+ - Angular
+ - Express
+ - Vue
+Correct answer: Express
+Explanation: Express is a popular back-end framework for Node.js.
+
+Question: Which of the following is a database?
+Choices:
+ - MongoDB
+ - Node.js
+ - HTML
+ - React
+Correct answer: MongoDB
+Explanation: MongoDB is a NoSQL database often used in full-stack applications.
+
+Question: Which HTTP method is used to update a resource?
+Choices:
+ - GET
+ - POST
+ - PUT
+ - DELETE
+Correct answer: PUT
+Explanation: The PUT method is used to update existing resources on the server.
+
